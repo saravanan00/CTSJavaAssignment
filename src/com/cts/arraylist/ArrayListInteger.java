@@ -15,6 +15,8 @@ public class ArrayListInteger {
 		}return false;
 		}
 
+	
+	//do not use main method in this class.
 public static void main(String[]args)
 
 {	ArrayListInteger emp=new ArrayListInteger();
