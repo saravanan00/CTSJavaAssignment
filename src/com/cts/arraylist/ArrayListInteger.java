@@ -6,6 +6,7 @@ import java.util.List;
 
 public class ArrayListInteger {
 	public boolean integerId(List<Integer> list, int a) {
+		//what is a and what is ss?
 		for (Integer ss : list) {
 			if (ss == a) {
 				return true;
