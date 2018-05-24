@@ -10,5 +10,6 @@ public boolean update(EmployeeDetails emp);
 public boolean delete(int id);
 public EmployeeDetails get(int id);
  public List<EmployeeDetails> get();
- public void display(List<EmployeeDetails> empList);
+ public void display();
+ 
  }

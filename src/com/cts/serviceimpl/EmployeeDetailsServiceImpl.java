@@ -17,15 +17,23 @@ public class EmployeeDetailsServiceImpl implements EmployeeDetailsService {
 	@Override
 	public boolean add(EmployeeDetails emp) {
 		if(get(emp.getId())!=null)
+		{
 		return false;
+		}
+		else
+		{
 		emplist.add(emp);
 		return true;
+		}
 	}
 
 	@Override
 	public boolean update(EmployeeDetails emp) {
 		if(get(emp.getId())==null)
 			return false;
+		
+	EmployeeDetails temp=get(emp.getId());
+	emplist.remove(temp);
 		// TODO Auto-generated method stub
 		
 		emplist.add(emp);
@@ -63,8 +71,21 @@ public class EmployeeDetailsServiceImpl implements EmployeeDetailsService {
 		System.out.println(emp.getName());
 		System.out.println(emp.getSalary());
 	}
-	
+
 	@Override
+	public void display() {
+		for(EmployeeDetails dd:emplist)
+		{
+			view(dd);
+		}
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+	
+	
+	/*@Override
 	public void display(List<EmployeeDetails> emplist) {
 		
 		
@@ -74,5 +95,5 @@ public class EmployeeDetailsServiceImpl implements EmployeeDetailsService {
 		view(emp);
 	}
 	}
-
+*/
 }
