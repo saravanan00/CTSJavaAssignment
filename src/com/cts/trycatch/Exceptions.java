@@ -24,3 +24,7 @@ public static void main (String[]args) {
 	
 }
 }
+//unchecked exceptions  userdefined
+//checked predefined
+
+	
