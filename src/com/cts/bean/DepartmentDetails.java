@@ -1,15 +1,18 @@
 package com.cts.bean;
 
+import java.util.List;
+
 public class DepartmentDetails {
 private int id;
 private String name;
-private EmployeeDetails employeedetails;
+private List<EmployeeDetails> employeedetails;
 public int getId() {
 	return id;
 }
 public void setId(int id) {
 	this.id = id;
 }
+
 public String getName() {
 	return name;
 }
@@ -22,9 +25,17 @@ public DepartmentDetails(int id, String name) {
 public void setName(String name) {
 	this.name = name;
 }
-public EmployeeDetails getEmployeedetails() {
+@Override
+public String toString() {
+	return "DepartmentDetails [id=" + id + ", name=" + name + ", employeedetails=" + employeedetails + "]";
+}
+public List<EmployeeDetails> getEmployeedetails() {
 	return employeedetails;
 }
+public void setEmployeedetails(List<EmployeeDetails> employeedetails) {
+	this.employeedetails = employeedetails;
+}
+
 
 
 }

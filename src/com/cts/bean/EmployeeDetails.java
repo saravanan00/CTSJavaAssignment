@@ -1,9 +1,27 @@
 package com.cts.bean;
 
 public class EmployeeDetails {
+	@Override
+	public String toString() {
+		return "EmployeeDetails [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+	}
 	private int id;
 	private String name;
 	private int salary;
+	private int deptId;
+	public EmployeeDetails(int id, String name, int salary, int deptId) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.deptId = deptId;
+	}
+	public int getDeptId() {
+		return deptId;
+	}
+	public void setDeptId(int deptId) {
+		this.deptId = deptId;
+	}
 	public int getId() {
 		return id;
 	}

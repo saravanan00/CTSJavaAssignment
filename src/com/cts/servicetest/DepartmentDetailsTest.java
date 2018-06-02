@@ -2,26 +2,26 @@ package com.cts.servicetest;
 
 import com.cts.bean.DepartmentDetails;
 import com.cts.bean.EmployeeDetails;
-import com.cts.service.DepartmentDetailsService;
-import com.cts.service.EmployeeDetailsService;
-import com.cts.serviceimpl.DepartmentDetailsServiceImpl;
-import com.cts.serviceimpl.EmployeeDetailsServiceImpl;
+import com.cts.service.DepartmentService;
+import com.cts.service.EmployeeService;
+import com.cts.serviceimpl.DepartmentServiceImpl;
+import com.cts.serviceimpl.EmployeeServiceImpl;
 
 public class DepartmentDetailsTest {
-	private  static EmployeeDetailsService employeeservice;	
-	private static DepartmentDetailsService departmentdetails;
+	private  static EmployeeService employeeservice;	
+	private static DepartmentService departmentdetails;
 
 	public static void init() {
-		employeeservice=new EmployeeDetailsServiceImpl();
-		departmentdetails=new DepartmentDetailsServiceImpl(employeeservice);
+		employeeservice=new EmployeeServiceImpl();
+		departmentdetails=new DepartmentServiceImpl(employeeservice);
 		
-		employeedetails=new EmployeeDetailsServiceImpl();
+		employeeservice=new EmployeeServiceImpl();
 		EmployeeDetails emp=new 	EmployeeDetails(1,"sara",50000);
-		employeedetails.add(emp);
+		employeeservice.add(emp);
 		emp=new EmployeeDetails(2,"dinesh",6000);
-		employeedetails.add(emp);
+		employeeservice.add(emp);
 		
-		departmentdetails=new DepartmentDetailsServiceImpl();
+		departmentdetails=new DepartmentServiceImpl();
 		DepartmentDetails dep=new DepartmentDetails(1,"production");
 		departmentdetails.add(dep);
 		dep=new DepartmentDetails(2,"management");
@@ -33,16 +33,16 @@ public class DepartmentDetailsTest {
 	public static void main(String[] args) {
 	init();	
 	
-DepartmentDetailsService departmentdetails=new DepartmentDetailsServiceImpl();
+DepartmentService departmentdetails=new DepartmentServiceImpl();
 /*DepartmentDetails dep=new DepartmentDetails(1,"production");
 departmentdetails.add(dep);
 dep=new DepartmentDetails(2,"management");
 departmentdetails.add(dep);
 dep=new DepartmentDetails(3,"support");
-departmentdetails.add(dep);*/
+departmentdetails.add(dep);
 dep=new DepartmentDetails(1,"systemanalyst");
 departmentdetails.update(dep);
 departmentdetails.delete(1);
-departmentdetails.display();
+departmentdetails.display();*/
 }
 }
